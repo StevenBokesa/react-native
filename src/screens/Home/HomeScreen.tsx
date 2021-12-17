@@ -1,11 +1,25 @@
 import { useNavigation } from '@react-navigation/core'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import MenuImage from '../../components/MenuImage/MenuImage';
 import { auth } from '../../data/firebase'
 import styles from "./styles";  
 
 export default function HomeScreen(props: { navigation: any }) {
     const { navigation } = props
+
+    useLayoutEffect(() => {
+      navigation.setOptions({
+        headerLeft: () => (
+          <MenuImage
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+        ),
+        headerRight: () => <View />,
+      });
+    }, []);
 
   const handleSignOut = () => {
     auth
