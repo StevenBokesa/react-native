@@ -5,22 +5,28 @@ import HomeScreen from '../screens/Home/HomeScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from '../screens/Login/LoginScreen';
+import AddChatScreen from '../screens/AddChat/AddChatScreen';
+
+
 
 const Stack = createStackNavigator();
 
 function MainNavigator() {
     return(
       <Stack.Navigator
-        screenOptions={{
-            headerTitleStyle: {
-              fontWeight: 'bold',
-              textAlign: 'center',
-              alignSelf: 'center',
-              flex: 1,
-            }
-        }}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#6646ee'
+        },
+        headerTintColor: '#ffffff',
+        headerTitleStyle: {
+          fontSize: 22
+        }
+      }}
       >
         <Stack.Screen name='Home' component={HomeScreen} />
+        <Stack.Screen name='AddChat' component={AddChatScreen} />
+   
        
    
       </Stack.Navigator>

@@ -32,7 +32,7 @@ export default function DrawerContainer(props: { navigation: any; }) {
           title="CREATE GROUP"
           source={require("../../../assets/icons/category.png")}
           onPress={() => {
-            navigation.navigate("Create");
+            navigation.navigate("AddChat");
             navigation.closeDrawer();
           }}
         />
