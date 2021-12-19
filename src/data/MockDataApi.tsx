@@ -24,3 +24,4 @@ const handleSignUp = () => {
           .catch((error: { message: any }) => alert(error.message))
       }
       
+      
