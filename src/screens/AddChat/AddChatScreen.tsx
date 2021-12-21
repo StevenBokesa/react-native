@@ -34,7 +34,7 @@ export default function AddChatScreen(props: { navigation: any }) {
         onPress={createChat}
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Sign out</Text>
+        <Text style={styles.buttonText}>Add group chat</Text>
       </TouchableOpacity>
     </View>
   );
